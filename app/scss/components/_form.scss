@@ -1,3 +1,5 @@
+@import "../abstracts/mixins";
+
 #searchForm {
   display: flex;
   flex-wrap: wrap;
@@ -5,12 +7,38 @@
   align-items: center;
   margin: 10px 0;
 
+  @include breakpoints(md) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: column;
+  }
+
+  @include breakpoints(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  @include breakpoints(xl) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+
   input[type='text'] {
     padding: 8px;
     border-radius: 5px;
     border: none;
-    margin: 0 10px;
+    margin: 10px;
+    display: flex;
     flex-grow: 1;
+    align-items: flex-start;
+    width: 98%;
   }
 
   input[type='submit'] {
@@ -22,4 +50,13 @@
     cursor: pointer;
     margin: 0 10px;
   }
+
+
 }
+
+
+
+
+
+
+
