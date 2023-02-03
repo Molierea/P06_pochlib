@@ -35,12 +35,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   transition: all 0.2s ease-in-out;
+  align-self: baseline;
 }
 .button__text {
   color: white;
 }
 .button--green {
-  background-color: darkgreen;
+  background-color: #469488;
 }
 .button--green__text {
   color: white;
@@ -58,12 +59,40 @@ body {
   align-items: center;
   margin: 10px 0;
 }
+@media (min-width: 768px) {
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+}
+@media (min-width: 1200px) {
+  #searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+  }
+}
 #searchForm input[type=text] {
   padding: 8px;
   border-radius: 5px;
   border: none;
-  margin: 0 10px;
+  margin: 10px;
+  display: flex;
   flex-grow: 1;
+  align-items: flex-start;
+  width: 98%;
 }
 #searchForm input[type=submit] {
   background-color: green;
@@ -75,103 +104,66 @@ body {
   margin: 0 10px;
 }
 
-@media (min-width: 768px) {
-  #searchForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-    flex-direction: column;
-  }
-  input {
-    flex: 1;
-    margin-right: 10px;
-    align-items: flex-start;
-    width: 100%;
-  }
-  .button {
-    align-self: baseline;
-  }
-}
-@media (min-width: 992px) {
-  #searchForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-  }
-}
-@media (min-width: 1200px) {
-  #searchForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-  }
-}
-@media (min-width: 768px) {
-  #searchForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-    flex-direction: column;
-  }
-  input {
-    flex: 1;
-    margin-right: 10px;
-    align-items: flex-start;
-    width: 100%;
-  }
-  .button {
-    align-self: baseline;
-  }
-}
-@media (min-width: 992px) {
-  #searchForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-  }
-}
-@media (min-width: 1200px) {
-  #searchForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-  }
-}
 /* Card */
-.cards {
+#card-container {
   display: flex;
   flex-wrap: wrap;
-  /* Search Results */
+  justify-content: center;
 }
-.cards .card {
+
+.cards {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   padding: 1rem;
   margin: 0 10px;
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
 }
+@media (min-width: 576px) {
+  .cards {
+    width: 30%;
+  }
+}
+@media (min-width: 768px) {
+  .cards {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .cards {
+    width: 30%;
+  }
+}
 .cards .card__title {
   margin-left: 1rem;
-}
-.cards .card__unavailable {
-  max-width: 30%;
 }
 .cards .card__description {
   text-align: justify;
 }
 .cards .card__author {
   font-style: italic;
+}
+.cards .card__image {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .cards .card__image {
+    max-width: 40%;
+  }
+}
+@media (min-width: 768px) {
+  .cards .card__image {
+    max-width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .cards .card__image {
+    max-width: 70%;
+  }
 }
 .cards .heading {
   display: flex;
@@ -185,31 +177,6 @@ body {
   flex: 1;
   font-size: 2rem;
   margin-left: 4rem;
-}
-@media (min-width: 768px) {
-  .cards .search-results {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .cards .search-results .card {
-    width: 33.33%;
-  }
-}
-@media (min-width: 576px) {
-  .cards .card {
-    width: 50%;
-  }
-  .cards .card__image {
-    max-width: 40%;
-  }
-}
-@media (min-width: 992px) {
-  .cards .card {
-    width: 25%;
-  }
-  .cards .card__image {
-    max-width: 70%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
